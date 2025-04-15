@@ -8,11 +8,9 @@ return {
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
 		bigfile = {},
+		bufdelete = {},
 		dashboard = {
 			preset = {
-				pick = function(cmd, opts)
-					return LazyVim.pick(cmd, opts)()
-				end,
 				-- stylua: ignore
 				---@type snacks.dashboard.Item[]
 				keys = {
@@ -58,7 +56,7 @@ return {
 		-- find
 		{ "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
 		{ "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
-		{ "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+		{ "<leader>ff", function() Snacks.picker.files({hidden = true, ignored = true}) end, desc = "Find Files" },
 		{ "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
 		{ "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
 		{ "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
@@ -105,5 +103,7 @@ return {
 		{ "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
 		{ "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
 		{ "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
+
+		{ "<leader>bd", function () Snacks.bufdelete.all() end, desc ="Bufdelete"},
 	},
 }
