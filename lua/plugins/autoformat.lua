@@ -5,12 +5,12 @@ return { -- Autoformat
 		cmd = { "ConformInfo" },
 		keys = {
 			{
-				"<leader>f",
+				"<leader>bf",
 				function()
 					require("conform").format({ async = true, lsp_format = "fallback" })
 				end,
 				mode = "",
-				desc = "[F]ormat buffer",
+				desc = "[b]uffer [f]ormat",
 			},
 		},
 		opts = {
@@ -31,8 +31,6 @@ return { -- Autoformat
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
-				xsd = { "xmlformatter" },
-				xsl = { "xmlformatter" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
