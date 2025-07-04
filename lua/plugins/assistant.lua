@@ -4,7 +4,6 @@ return {
 	lazy = false,
 	version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
 	opts = {
-		provider = "claude",
 		repo_map = {
 			ignore_patterns = { "%.git", "%.worktree", "__pycache__", "node_modules", ".env", "app.env" }, -- ignore files matching these
 		},
