@@ -1,6 +1,27 @@
 return {
+	{
+		"echasnovski/mini.ai",
+		opts = {
+			n_lines = 500,
+		},
+	},
+	{
+		"echasnovski/mini.surround",
+		opts = {},
+	},
+	{
+		"echasnovski/mini.sessions",
+		opts = {},
+	},
+	{
+		"echasnovski/mini.statusline",
+		opts = {
+			use_icons = vim.g.have_nerd_font,
+		},
+	},
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
+		enabled = false,
 		config = function()
 			-- Better Around/Inside textobjects
 			--
