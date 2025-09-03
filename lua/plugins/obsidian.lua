@@ -70,7 +70,7 @@ return {
 				-- Optional, if you keep daily notes in a separate directory.
 				folder = "1 - Dailies",
 				-- Optional, if you want to change the date format for the ID of daily notes.
-				date_format = "%Y/%m-%b/%Y-%m-%d-%a",
+				date_format = "%Y//%m-%b//%Y-%m-%d-%a",
 				-- Optional, if you want to change the date format of the default alias of daily notes.
 				alias_format = "%B %-d, %Y",
 				-- Optional, default tags to add to each new daily note created.
@@ -87,8 +87,9 @@ return {
 			---@param spec { id: string, dir: obsidian.Path, title: string|? }
 			---@return string|obsidian.Path The full path to the new note.
 			note_path_func = function(spec)
-				-- This is equivalent to the default behavior.
-				local path = spec.dir / tostring(spec.title)
+				-- For daily notes, spec.title is nil, so use spec.id instead
+				local filename = spec.title or spec.id
+				local path = spec.dir / tostring(filename)
 				return path:with_suffix(".md")
 			end,
 
