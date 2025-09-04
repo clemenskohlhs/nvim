@@ -1,4 +1,3 @@
--- CodeCompanion plugin configuration
 -- This file configures AI-powered coding assistance and diff visualization plugins
 
 return {
@@ -30,20 +29,10 @@ return {
 
 		-- Key mappings for CodeCompanion features
 		keys = {
-			-- Open CodeCompanion chat interface
-			{ "<leader>cc", "<cmd>CodeCompanionChat<cr>", desc = "CodeCompanion Chat" },
-
-			-- Show available actions (normal and visual mode)
-			{ "<leader>ca", "<cmd>CodeCompanionActions<cr>", mode = { "n", "v" }, desc = "CodeCompanion Actions" },
-
-			-- Toggle CodeCompanion interface
-			{ "<leader>ct", "<cmd>CodeCompanionToggle<cr>", desc = "CodeCompanion Toggle" },
-			-- Inline AI assistance for selected code (visual mode only)
+			{ "<leader>cc", "<cmd>CodeCompanionChat Toggle<cr>", desc = "CodeCompanion Chat" },
+			{ "<leader>cv", "<cmd>CodeCompanionChat Add<cr>", mode = "v", desc = "CodeCompanion Add Text" },
+			{ "<leader>cp", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions" },
 			{ "<leader>ci", "<cmd>CodeCompanion<cr>", mode = "v", desc = "CodeCompanion Inline" },
-			-- Quick chat command interface
-			{ "<leader>cq", "<cmd>CodeCompanionCmd<cr>", desc = "CodeCompanion Quick Chat" },
-			-- Apply suggested changes
-			{ "<leader>cy", "<cmd>CodeCompanionAdd<cr>", desc = "CodeCompanion Apply Changes" },
 		},
 
 		-- Plugin configuration options
@@ -57,11 +46,14 @@ return {
 			strategies = {
 				-- Chat strategy uses Anthropic's AI model
 				chat = {
-					adapter = "anthropic",
+					adapter = "gemini",
 				},
 				-- Inline assistance also uses Anthropic's AI model
 				inline = {
-					adapter = "anthropic",
+					adapter = "gemini",
+				},
+				cmd = {
+					adapter = "gemini",
 				},
 			},
 		},
