@@ -15,7 +15,7 @@ return {
 		priority = 1000,
 		opts = {},
 		config = function()
-			vim.cmd([[colorscheme tokyonight-storm]])
+			vim.cmd([[colorscheme tokyonight]])
 		end,
 	},
 	{
@@ -52,6 +52,15 @@ return {
 		opts = {},
 		-- config = function()
 		-- 	vim.cmd([[colorscheme bamboo]])
+		-- end,
+	},
+	{
+		"loctvl842/monokai-pro.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		-- config = function()
+		-- 	vim.cmd([[colorscheme monokai-pro]])
 		-- end,
 	},
 }

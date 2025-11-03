@@ -32,7 +32,6 @@ return {
 			{ "<leader>cc", "<cmd>CodeCompanionChat Toggle<cr>", desc = "CodeCompanion Chat" },
 			{ "<leader>cv", "<cmd>CodeCompanionChat Add<cr>", mode = "v", desc = "CodeCompanion Add Text" },
 			{ "<leader>cp", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions" },
-			{ "<leader>ci", "<cmd>CodeCompanion<cr>", mode = "v", desc = "CodeCompanion Inline" },
 		},
 
 		-- Plugin configuration options
