@@ -220,7 +220,8 @@ return {
 				pyright = {}, --python
 				lemminx = {}, --xml
 				ts_ls = {}, --typescript
-				-- intelephense = {}, --php
+				intelephense = {}, --php
+				svelte = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
