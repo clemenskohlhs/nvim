@@ -3,8 +3,6 @@ return { -- Autocompletion
 	event = "VimEnter",
 	version = "1.*",
 	dependencies = {
-		-- Avante Assistant
-		"Kaiser-Yang/blink-cmp-avante",
 		-- Snippet Engine
 		{
 			"L3MON4D3/LuaSnip",
