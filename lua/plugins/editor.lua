@@ -172,19 +172,4 @@ return {
 			})
 		end,
 	},
-	{
-		"sindrets/diffview.nvim",
-		keys = {
-			{
-				"<leader>do",
-				vim.cmd.DiffviewOpen,
-				desc = "[d]iffview [o]pen",
-			},
-			{
-				"<leader>dc",
-				vim.cmd.DiffviewClose,
-				desc = "[d]iffview [c]lose",
-			},
-		},
-	},
 }
