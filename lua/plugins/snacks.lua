@@ -47,6 +47,7 @@ return {
 		},
 		quickfile = {},
 		gh = {},
+		terminal = {},
 	},
 	-- stylua: ignore
 	keys = {
@@ -115,5 +116,7 @@ return {
 		{ "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
 
 		{ "<leader>bd", function () Snacks.bufdelete.all() end, desc ="Bufdelete"},
+
+		{"<F8>", function() Snacks.terminal.toggle(nil, { win = { position = "float" }}) end, mode = { "n", "t" }, desc = "Toggle Floating Terminal"},
 	},
 }
